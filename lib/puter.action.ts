@@ -1,0 +1,14 @@
+import puter from "@heyputer/puter.js";
+
+export const SignIn = async () => await puter.auth.signIn();
+
+export const signOut = () => puter.auth.signOut();
+
+export const getCuttentUser = async () =>{
+    try {
+        return await puter.auth.getUser();
+    } catch (error) {
+        console.error(error)
+        return null;
+    }
+};
